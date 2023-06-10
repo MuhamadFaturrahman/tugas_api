@@ -28,6 +28,37 @@ class PostService {
     return await http.get(url, headers: RequestHelper.basicHeader());
   }
 
+  Future<http.Response> fetchPhotos(int id) async {
+    final endPoint = "${EndPoint.post}/$id/photos";
+    final url = Uri.parse(endPoint);
+
+    return await http.get(url, headers: RequestHelper.basicHeader());
+  }
+
+  Future<http.Response> create(Post post) async {
+    String endPoint = EndPoint.post;
+    Uri url = Uri.parse(endPoint);
+    var jsonBody = post.toMap();
+
+    return await http.post(
+      url,
+      body: jsonEncode(jsonBody),
+      headers: RequestHelper.basicHeader(),
+    );
+  }
+
+  Future<http.Response> put(Post post) async {
+    String endPoint = "${EndPoint.post}/${post.id}";
+    Uri url = Uri.parse(endPoint);
+    var jsonBody = post.toMap();
+
+    return await http.put(
+      url,
+      body: jsonEncode(jsonBody),
+      headers: RequestHelper.basicHeader(),
+    );
+  }
+
   Future<http.Response> patch({
     required int id,
     String? title,
