@@ -103,7 +103,8 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           GoRouter.of(context).pushNamed(Approutes.addPost);
         },
-        label: const Text("Tambah Berita"),
+        icon: const Icon(Icons.add),
+        label: const Text("Add"),
       ),
     );
   }
