@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:kel_2_api/models/album.dart';
-import 'package:kel_2_api/models/comment.dart';
-import 'package:kel_2_api/models/photo.dart';
-import 'package:kel_2_api/models/post.dart';
-import 'package:kel_2_api/services/post_services.dart';
+import 'package:tugas_api/models/album.dart';
+import 'package:tugas_api/models/comment.dart';
+import 'package:tugas_api/models/photo.dart';
+import 'package:tugas_api/models/post.dart';
+import 'package:tugas_api/services/post_services.dart';
 
 class PostController {
   Future<List<Post>> fetchAll() async {
