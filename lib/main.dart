@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'ITG Consume API',
+      title: 'Kelompok 8/B Consume API',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
       ),
       routeInformationParser: Approutes.goRouter.routeInformationParser,
       routeInformationProvider: Approutes.goRouter.routeInformationProvider,

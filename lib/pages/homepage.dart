@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Page"),
+        title: const Text("Consume API"),
       ),
       body: SafeArea(
         child: FutureBuilder<List<Post>>(
